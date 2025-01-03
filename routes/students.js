@@ -27,4 +27,26 @@ router.post('/add', (req, res) => {
       res.redirect('/students');
     });
   });
+
+  //Update Student Information
+router.get('/edit/:sid', (req, res) => {
+    const query = 'SELECT * FROM student WHERE sid = ?';
+    db.query(query, [req.params.sid], (err, results) => {
+      if (err || results.length === 0) return res.redirect('/students');
+      res.render('editStudent', { student: results[0], error: null });
+    });
+  });
+  
+  router.post('/edit/:sid', (req, res) => {
+    const { name, age } = req.body;
+    if (name.length < 2 || age < 18) {
+      return res.render('editStudent', { student: { sid: req.params.sid, name, age }, error: 'Invalid input' });
+    }
+    const query = 'UPDATE student SET name = ?, age = ? WHERE sid = ?';
+    db.query(query, [name, age, req.params.sid], (err) => {
+      if (err) return res.render('editStudent', { student: { sid: req.params.sid, name, age }, error: 'Update failed' });
+      res.redirect('/students');
+    });
+  });
+  
 module.exports = router;
