@@ -11,4 +11,20 @@ router.get('/', (req, res) => {
   });
 });
 
+//Add a Student
+router.get('/add', (req, res) => {
+    res.render('addStudent', { error: null });
+});
+
+router.post('/add', (req, res) => {
+    const { sid, name, age } = req.body;
+    if (sid.length !== 4 || name.length < 2 || age < 18) {
+      return res.render('addStudent', { error: 'Invalid input' });
+    }
+    const query = 'INSERT INTO student (sid, name, age) VALUES (?, ?, ?)';
+    db.query(query, [sid, name, age], (err) => {
+      if (err) return res.render('addStudent', { error: 'Student ID already exists' });
+      res.redirect('/students');
+    });
+  });
 module.exports = router;

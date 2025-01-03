@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Student</title>
+</head>
+<body>
+  <h1>Add a Student here!!!</h1>
+  <% if (error) { %><p style="color: red;"><%= error %></p><% } %>
+  <!--form to add Student to the db-->
+  <form method="post">
+    <input type="text" name="sid" placeholder="Student ID" required>
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="number" name="age" placeholder="Age" required>
+    <button type="submit">Add</button>
+  </form>
+</body>
+</html>
