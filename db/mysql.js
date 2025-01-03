@@ -23,3 +23,4 @@ connection.query('SELECT * FROM student', (err, results) => {
 */
 
 module.exports = connection;
+ 
