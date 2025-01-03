@@ -13,9 +13,10 @@ app.set('view engine', 'ejs');
 
 // Routes
 app.use('/', require('./routes/home'));
-
+app.use('/students', require('./routes/students'));
 
 // Start Server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
+  
 });
