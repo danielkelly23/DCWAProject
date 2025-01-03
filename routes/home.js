@@ -5,7 +5,8 @@ router.get('/', (req, res) => {
   res.render('home', {
     title: 'Home',
     links: [
-      { href: '/students', name: 'Students' }
+      { href: '/students', name: 'Students' },
+      { href: '/grades', name: 'Grades' }
     ]
   });
 });

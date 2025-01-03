@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 // Routes
 app.use('/', require('./routes/home'));
 app.use('/students', require('./routes/students'));
-
+app.use('/grades', require('./routes/grades'));
 
 // Start Server
 app.listen(PORT, () => {
