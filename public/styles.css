@@ -1,0 +1,92 @@
+/* General Reset */
+body {
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header */
+  h1 {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error Message */
+  p {
+    margin: 10px 0;
+  }
+  
+  p.error {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  
+  
+  /* Buttons */
+  button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  
+
+  
+  /* Page Links */
+  a.back-link {
+    display: inline-block;
+    margin: 20px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  
